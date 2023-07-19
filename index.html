@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etch-a-Sketch</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="resetStyle.css">
+    <script src="javascript.js" defer></script>
+</head>
+<body>
+    <div class="flex-container">
+        <div class="title"><h1>SketchPad</h1></div>
+        <div class="mode">Coloring</div>
+        <button class="resetButton" onclick="resetBoard()">Reset</button>
+        <div class="content">
+            <button class="erasorButton" onclick="changeColor('white')">Erasor</button>
+            <div class="board"></div>
+            <div class="buttons">
+                <button class="randomButton" onclick="changeColor('random')">Random</button>
+                <button class="blackButton" onclick="changeColor('black')">Black</button>
+                <button class="grayButton" onclick="changeColor('gray')">Gray</button>
+                <button class="color-picker-button">Colors</button>
+                <div class="color-picker-container">
+                    <span>Select color:</span>
+                    <input type="color" class="color-picker">
+                </div>
+               
+            </div>
+        </div>
+        <div class="size">
+            <input type="text" placeholder="1-100" onchange="changeSize(this.value)" />
+            <button class="setSize">Set Size</button>
+            <div class="error">Input must be between 2 and 100</div>
+        </div>
+        <span class="credits">Created by Rhasor</span>
+
+    </div>
+</body>
+</html>
